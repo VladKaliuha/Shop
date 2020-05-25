@@ -1,0 +1,13 @@
+#order-button{
+    margin-top: 5%;
+    display: none;
+    min-width: 20%;
+}
+
+.container{
+    text-align:center
+}
+
+#total-price{
+    margin-left: 70%;
+}

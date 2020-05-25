@@ -1,0 +1,64 @@
+body {
+    background-color: #F2F6FA;
+}
+
+.container {
+    margin: 5% auto;
+    padding: 2% 0;
+    background-color: #FFFFFF;
+    width: 90%;
+    min-width: 80%;
+    min-height: 500px;
+}
+
+.page-name {
+    font-family: 'Museo Sans';
+    font-weight: 800;
+    font-size: 30px;
+    display: block;
+    margin-bottom: 4%;
+}
+
+.nav-elem {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.color-changeable:hover {
+    background: #222222;
+}
+
+.navbar {
+    padding:0 2rem;
+    background: #464547;
+    position: relative;
+    height: 60px;
+    font-size: 16px;
+    display: flex;
+}
+
+.logo-txt {
+    padding: 10px 10px 0 0;
+    line-height: 5px;
+}
+
+.logo-txt-dp {
+    font-size: small;
+}
+
+.auth:hover{
+    text-decoration: none;
+}
+
+#navbarSupportedContent{
+    margin-left: auto;
+}
+
+#add-item,
+#cart{
+    width: 45px;
+    height: 45px;
+    color: white;
+}
