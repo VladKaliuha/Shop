@@ -6,6 +6,9 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
 
+/**
+ * Data transfer object of item
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,8 +26,10 @@ public class ItemDTO {
     @NotNull
     private Integer price;
 
+    @NotNull
     private String image;
 
+    @NotNull
     private String description;
 
     @NotNull

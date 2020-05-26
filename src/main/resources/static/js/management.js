@@ -1,6 +1,6 @@
-$(document).ready(function() {
+window.onload = function() {
     loadInfo();
-});
+}
 
 function loadInfo(){
     $.ajax({

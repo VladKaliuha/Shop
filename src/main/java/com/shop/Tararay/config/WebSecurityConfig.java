@@ -14,14 +14,21 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    /**
+     * @return ModelMapper as bean
+     */
     @Bean
     public ModelMapper modelMapper() {
         return new ModelMapper();
     }
 
+    /**
+     * @param http
+     * @throws Exception Configure the HttpSecurity.
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        //        @formatter:off
+//        @formatter:off
                 http
                     .csrf().disable()
                     .sessionManagement()
@@ -40,6 +47,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //         @formatter:on
     }
 
+    /**
+     * @return UserDetailsService as bean with user in memory
+     */
     @Bean
     @Override
     public UserDetailsService userDetailsService() {

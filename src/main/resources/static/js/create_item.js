@@ -1,4 +1,4 @@
-$("#create-item-button").click(function(){
+$("#create-item-button").unbind('click').bind('click', function(){
     let item = {
         code: $("#item-code").val(),
         name: $("#item-name").val(),

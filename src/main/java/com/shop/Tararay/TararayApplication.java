@@ -3,6 +3,9 @@ package com.shop.Tararay;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Application start point
+ */
 @SpringBootApplication
 public class TararayApplication {
 

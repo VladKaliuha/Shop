@@ -1,6 +1,6 @@
-$(document).ready(function() {
+window.onload = function() {
     loadInfo();
-});
+}
 
 function loadInfo(){
     let cart = JSON.parse(localStorage.getItem("cart"));
@@ -41,7 +41,7 @@ function appendItem(item){
     )
 }
 
-$("#order-button").click(function(){
+$("#order-button").unbind('click').bind('click',function(){
     let cart = JSON.parse(localStorage.getItem("cart"));
     if(cart){
         $.ajax({

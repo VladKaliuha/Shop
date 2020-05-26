@@ -22,6 +22,10 @@ public class PageController {
     private static final String CART_PAGE_LOCATION = "shop/cart";
     private static final String MANAGEMENT_PAGE_LOCATION = "shop/management";
 
+    /**
+     * @param authentication authentication principal
+     * @return redirect to main page due to user authentication
+     */
     @GetMapping
     public ModelAndView redirectByRole(final Authentication authentication) {
         if (Objects.nonNull(authentication) && authentication.isAuthenticated()) {
@@ -31,6 +35,9 @@ public class PageController {
         }
     }
 
+    /**
+     * @return ModelAndView of Shopping page
+     */
     @GetMapping("/shopping")
     public ModelAndView openMainPage() {
         log.info("GET Main shop page");
@@ -40,6 +47,9 @@ public class PageController {
         return modelAndView;
     }
 
+    /**
+     * @return ModelAndView of Create iten page
+     */
     @GetMapping("/create-item")
     public ModelAndView openCreateItemPage() {
         log.info("GET Create item page");
@@ -49,15 +59,21 @@ public class PageController {
         return modelAndView;
     }
 
+    /**
+     * @return ModelAndView of Management page
+     */
     @GetMapping("/management")
     public ModelAndView openManagementPage() {
-        log.info("GET Cart page");
+        log.info("GET Management page");
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName(TEMPLATE_LOCATION);
         modelAndView.addObject(PAGE_KEY, MANAGEMENT_PAGE_LOCATION);
         return modelAndView;
     }
 
+    /**
+     * @return ModelAndView of Cart page
+     */
     @GetMapping("/cart")
     public ModelAndView openCartPage() {
         log.info("GET Cart page");
